@@ -1,0 +1,26 @@
+<Alloy>
+	<Window id="contacts" onClose="closeWindow">
+		<TableView id="table">
+			<TableViewRow onClick="showChangePresenceDialog">
+				<Label id="show" />
+			</TableViewRow>
+			<TableViewRow onClick="changeStatusText">
+				<Label id="statusText" />
+			</TableViewRow>
+			<TableViewRow onClick="addContact">
+				<Label>Add contact</Label>
+			</TableViewRow>
+		</TableView>
+		
+		<!-- An option dialog that gets opened by the controller when clicking on the change presence label -->
+		
+		<OptionDialog id="changePresenceDialog" title="Change presence status" onClick="changePresence">
+			<Options>
+				<Option>Chat</Option>
+				<Option>Do not disturb</Option>
+				<Option>Away</Option>
+				<Option>Extended away</Option>
+			</Options>
+		</OptionDialog>
+	</Window>
+</Alloy>

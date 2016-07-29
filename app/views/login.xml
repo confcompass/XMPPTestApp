@@ -1,0 +1,27 @@
+<Alloy>
+	<Window class="container">
+		<ScrollView>
+			<View>
+				<Label>Web socket URL</Label>
+				<TextField id="url" hintText="ws://localhost:5280/websocket/" />
+			</View>
+			<View>
+				<Label>Username</Label>
+				<TextField id="username" hintText="sander" />
+			</View>
+			<View>
+				<Label>Domain name</Label>
+				<TextField id="domain" hintText="localhost" />
+			</View>
+			<View>
+				<Label>Resource</Label>
+				<TextField id="resource" hintText="" />
+			</View>
+			<View>
+				<Label>Password</Label>
+				<TextField id="password" passwordMask="true" hintText="" />
+			</View>
+			<Button onClick="doConnect">Connect</Button>
+		</ScrollView>
+	</Window>
+</Alloy>

@@ -1,0 +1,11 @@
+<Alloy>
+	<Window class="container">
+		<ScrollView>
+			<View>
+				<Label>Username</Label>
+				<TextField id="username" hintText="buddy@localhost" />
+			</View>
+			<Button onClick="addUser">Add</Button>
+		</ScrollView>
+	</Window>
+</Alloy>

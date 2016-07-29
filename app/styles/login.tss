@@ -1,0 +1,24 @@
+"ScrollView": {
+	"layout": "vertical",
+	"scrollType": "vertical"
+}
+
+"View": {
+	layout: "vertical",
+	width: Ti.UI.FILL,
+	height: Ti.UI.SIZE
+}
+
+"TextField": {
+	width: Ti.UI.FILL,
+	autocapitalization: Ti.UI.TEXT_AUTOCAPITALIZATION_NONE,
+	autocorrect: false
+}
+
+"#url": {
+	keyboardType: Ti.UI.KEYBOARD_TYPE_URL
+}
+
+"#domain": {
+	keyboardType: Ti.UI.KEYBOARD_TYPE_URL
+}

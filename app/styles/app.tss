@@ -1,0 +1,28 @@
+".container": {
+	backgroundColor: "#fff"
+}
+
+"TextField": {
+	height: Ti.UI.SIZE,
+	borderStyle: Ti.UI.INPUT_BORDERSTYLE_ROUNDED
+}
+
+'TextField[platform=android]': {
+	height: Ti.UI.SIZE,
+	color: '#000',
+	hintTextColor: '#aaa'
+}
+
+'TextArea[platform=android]': {
+	color: '#000'
+}
+
+"Label": {
+	color: "#000",
+	width: Ti.UI.FILL,
+	height: Ti.UI.SIZE,
+	
+	font: {
+		fontSize: 12
+	}
+}

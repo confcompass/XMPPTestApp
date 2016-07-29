@@ -1,0 +1,11 @@
+<Alloy>
+	<Window class="container">
+		<ScrollView>
+			<View>
+				<Label>Status text</Label>
+				<TextField id="statusText" hintText="Away for coffee" />
+			</View>
+			<Button onClick="setStatusText">Change</Button>
+		</ScrollView>
+	</Window>
+</Alloy>

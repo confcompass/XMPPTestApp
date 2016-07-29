@@ -1,0 +1,18 @@
+"TableView": {
+	"layout": "vertical"
+}
+
+"TableViewRow[platform=ios]": {
+	"hasChild": true
+}
+
+"Label": {
+	"font": {
+		fontSize: 16
+	},
+	"width": Ti.UI.SIZE
+}
+
+"Label[platform=android]": {
+	"color": "#fff"
+}

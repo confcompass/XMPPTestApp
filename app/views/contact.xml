@@ -1,0 +1,8 @@
+<Alloy>
+	<Window class="container">
+		<ScrollView>
+			<TextArea id="vcard" />
+			<Button onClick="removeContact">Remove contact</Button>
+		</ScrollView>
+	</Window>
+</Alloy>

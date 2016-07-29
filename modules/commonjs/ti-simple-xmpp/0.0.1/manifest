@@ -1,0 +1,10 @@
+version: 0.0.1
+description:
+author:
+license: The MIT License
+copyright: Copyright © 2016 -
+name: ti-simple-xmpp
+moduleid: ti-simple-xmpp
+guid: 76cb731c-5abf-3b79-6cde-f04202e9ea6d
+platform: commonjs
+minsdk: 3.2.0.GA

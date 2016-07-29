@@ -1,0 +1,23 @@
+{
+  "name": "ti-simple-xmpp",
+  "version": "0.0.1",
+  "titaniumManifest": {
+    "guid": "76cb731c-5abf-3b79-6cde-f04202e9ea6d"
+  },
+  "dependencies": {
+    "simple-xmpp": "1.3.x"
+  },
+  "nativeDependencies": {
+    "net.iamyellow.tiws": "0.6.0"
+  },
+  "licenses": [
+    {
+      "type": "The MIT License",
+      "url": "http://www.opensource.org/licenses/mit-license.php"
+    }
+  ],
+  "_nativeDependencies": {
+    "net.iamyellow.tiws": "0.6.0"
+  },
+  "main": "ti-simple-xmpp.js"
+}

@@ -1,0 +1,37 @@
+"ScrollView": {
+	"layout": "vertical",
+	"scrollType": "vertical",
+	"height": Ti.UI.FILL
+}
+
+"View": {
+	layout: "vertical",
+	width: Ti.UI.FILL,
+	height: Ti.UI.SIZE
+}
+
+"TextArea": {
+	top: '3px',
+	width: Ti.UI.FILL,
+	borderStyle: Ti.UI.INPUT_BORDERSTYLE_ROUNDED,
+	borderRadius: 5,
+	borderWidth: 1,
+	borderColor: '#494949',
+}
+
+"#chat": {
+	editable: false,
+	height: '80%'
+}
+
+"TextField": {
+	top: '3px',
+	width: Ti.UI.FILL,
+	borderRadius: 5,
+	borderWidth: 1,
+	borderColor: '#494949'
+}
+
+"#input": {
+	editable: true
+}

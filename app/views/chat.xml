@@ -1,0 +1,10 @@
+<Alloy>
+	<Window id="chatWindow" onOpen="openWindow" onClose="closeWindow" class="container">
+		<ScrollView>
+			<Button id="username" onClick="showContact" />
+			<TextArea id="chat" />
+			<TextField platform="android" id="input" onClick="changeInput" onReturn="sendMessage" onBlur="stopInput" />
+			<TextField platform="ios" id="input" onChange="changeInput" onReturn="sendMessage" onBlur="stopInput" />
+		</ScrollView>
+	</Window>
+</Alloy>
