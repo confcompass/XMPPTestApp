@@ -88,6 +88,6 @@ rec {
     pkgs.xcodeenv.simulateApp {
       name = "simulate-XMPPTestApp";
       bundleId = "cc.conferences.xmpptestapp";
-      app = "${XMPPTestApp_ios_development}/build/iphone/build/Debug-iphonesimulator";
+      app = "${XMPPTestApp_ios_development}/build/iphone/build/Products/Debug-iphonesimulator";
     };
 } else {})
