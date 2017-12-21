@@ -24,7 +24,7 @@ rec {
       src = ./.;
       target = "android";
     });
-  
+
   XMPPTestApp_android_release = pkgs.lib.genAttrs systems (system:
     let
       pkgs = import nixpkgs { inherit system; };
@@ -36,7 +36,7 @@ rec {
       release = true;
       inherit androidKeyStore androidKeyAlias androidKeyStorePassword;
     });
-  
+
   emulate_XMPPTestApp_debug = pkgs.lib.genAttrs systems (system:
     pkgs.androidenv.emulateApp {
       name = "emulate-XMPPTestApp-debug";
@@ -46,7 +46,7 @@ rec {
       package = "cc.conferences.xmpptestapp";
       activity = ".XmpptestappActivity";
     });
-  
+
   emulate_XMPPTestApp_release = pkgs.lib.genAttrs systems (system:
     pkgs.androidenv.emulateApp {
       name = "emulate-XMPPTestApp-release";
@@ -56,7 +56,18 @@ rec {
       package = "cc.conferences.xmpptestapp";
       activity = ".XmpptestappActivity";
     });
-  
+
+  doc = pkgs.stdenv.mkDerivation {
+    name = "XMPPTestApp-doc";
+    src = ./.;
+    buildInputs = [ pkgs.nodePackages.jsdoc ];
+    installPhase = ''
+      jsdoc -R README.md -r app/lib -d $out/share/doc/XMPPTestApp/apidox
+      mkdir -p $out/nix-support
+      echo "doc api $out/share/doc/XMPPTestApp/apidox" >> $out/nix-support/hydra-build-products
+    '';
+  };
+
 } // (if builtins.elem "x86_64-darwin" systems then rec {
   XMPPTestApp_ipa =
     let

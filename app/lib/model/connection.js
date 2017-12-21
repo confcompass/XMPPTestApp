@@ -1,7 +1,6 @@
 /**
- * @static @class Connection
- *
  * Manages the connection with the XMPP server.
+ * @module model.connection
  */
 
 var xmpp = require('ti-simple-xmpp').SimpleXMPP;
@@ -13,10 +12,9 @@ function getFile() {
 }
 
 /**
- * @member Connection
- *
  * Sets the connectivity attributes
  *
+ * @function
  * @param {Object} args Connectivity attributes
  * @param {string} args.username Username
  * @param {string} args.domain Domain name where the user belongs to
@@ -35,9 +33,8 @@ function set(args) {
 exports.set = set;
 
 /**
- * @member Connection
- *
  * Writes the configuration to a JSON configuration file in the data directory
+ * @function
  */
 function write() {
     var file = getFile();

@@ -1,10 +1,3 @@
-/**
- * class Roster
- *
- * Stores all chat related information including users that we have been
- * connected with.
- */
-
 var inherit = require('util/inherit').inherit;
 var Observable = require('util/observable').Observable;
 var xmpp = require('ti-simple-xmpp').SimpleXMPP;
@@ -12,12 +5,16 @@ var MessageQueue = require('model/messagequeue').MessageQueue;
 var User = require('model/user').User;
 
 /**
- * @constructor
  * Constructs a new roster
+ *
+ * @class Roster
+ * @extends Observable
+ * @classdesc Stores all chat related information including users that we have been connected with.
+ * @constructor
  */
 function Roster() {
     Observable.call(this);
-    
+
     this.users = {};
     this.show = "chat";
     this.statusText = "";
@@ -31,6 +28,7 @@ inherit(Observable, Roster);
 /**
  * Invites a user to become friends
  *
+ * @method
  * @param {String} from JID of the user
  */
 Roster.prototype.subscribe = function(from) {
@@ -42,6 +40,7 @@ Roster.prototype.subscribe = function(from) {
 /**
  * Accepts a friend request of a user
  *
+ * @method
  * @param {String} from JID of the user
  */
 Roster.prototype.acceptSubscription = function(from) {
@@ -51,6 +50,7 @@ Roster.prototype.acceptSubscription = function(from) {
 /**
  * Removes a user as a friend
  *
+ * @method
  * @param {String} from JID of the user
  */
 Roster.prototype.unsubscribe = function(from) {
@@ -62,6 +62,7 @@ Roster.prototype.unsubscribe = function(from) {
 /**
  * Accepts an unfriend request from a user
  *
+ * @method
  * @param {String} from JID of the user
  */
 Roster.prototype.acceptUnsubscription = function(from) {
@@ -71,6 +72,7 @@ Roster.prototype.acceptUnsubscription = function(from) {
 /**
  * Change your presence status
  *
+ * @method
  * @param {String} show Presence status (see xmpp.setPresence())
  */
 Roster.prototype.setPresence = function(show) {
@@ -82,6 +84,7 @@ Roster.prototype.setPresence = function(show) {
 /**
  * Change your status text
  *
+ * @method
  * @param {String} statusText Status text
  */
 Roster.prototype.setStatusText = function(statusText) {
@@ -93,7 +96,8 @@ Roster.prototype.setStatusText = function(statusText) {
 /**
  * Returns all the JIDs of the users in the roster
  *
- * @return {Array.<String>} Array of JIDs
+ * @method
+ * @return {Array<String>} Array of JIDs
  */
 Roster.prototype.fetchUsernames = function() {
     return Object.keys(this.users).sort();
@@ -102,6 +106,7 @@ Roster.prototype.fetchUsernames = function() {
 /**
  * Adds a user to the roster
  *
+ * @method
  * @param {String} username JID of the user
  */
 Roster.prototype.addUser = function(username) {
@@ -111,6 +116,7 @@ Roster.prototype.addUser = function(username) {
 /**
  * Removes a user from the roster
  *
+ * @method
  * @param {String} username JID of the user
  */
 Roster.prototype.removeUser = function(username) {
