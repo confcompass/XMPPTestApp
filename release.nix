@@ -13,6 +13,10 @@
 
 let
   pkgs = import nixpkgs {};
+
+  preBuild = ''
+    sed -i -e "s|6.3.0|6.3.1|" tiapp.xml
+  '';
 in
 rec {
   XMPPTestApp_android_debug = pkgs.lib.genAttrs systems (system:
@@ -23,6 +27,8 @@ rec {
       name = "XMPPTestApp-android-debug";
       src = ./.;
       target = "android";
+      androidPlatformVersions = [ "25" "26" ];
+      inherit preBuild;
     });
 
   XMPPTestApp_android_release = pkgs.lib.genAttrs systems (system:
@@ -35,6 +41,7 @@ rec {
       target = "android";
       release = true;
       inherit androidKeyStore androidKeyAlias androidKeyStorePassword;
+      inherit preBuild;
     });
 
   emulate_XMPPTestApp_debug = pkgs.lib.genAttrs systems (system:
@@ -80,6 +87,7 @@ rec {
       release = true;
       inherit iosMobileProvisioningProfile iosCertificate iosCertificateName iosCertificatePassword;
       inherit enableWirelessDistribution installURL;
+      inherit preBuild;
     };
   
   XMPPTestApp_ios_development =
@@ -90,6 +98,7 @@ rec {
       name = "XMPPTestApp-ios-development";
       src = ./.;
       target = "iphone";
+      inherit preBuild;
     };
 
   simulate_XMPPTestApp =
