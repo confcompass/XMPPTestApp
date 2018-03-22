@@ -1,8 +1,8 @@
 { nixpkgs ? <nixpkgs>
 , systems ? [ "x86_64-linux" "x86_64-darwin" ]
 , androidKeyStore ? ./keystore # Change this to a keystore file
-, androidKeyAlias ? "xmpptestapp"
-, androidKeyStorePassword ? "secret"
+, androidKeyAlias ? "XMPPTestApp"
+, androidKeyStorePassword ? "mykeystore"
 , iosMobileProvisioningProfile ? null # Change this to a .mobileprovision file
 , iosCertificate ? null # Change this to a .p12 file
 , iosCertificateName ? "Example" # Should match what is in the p12 file
