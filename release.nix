@@ -34,6 +34,7 @@ rec {
       name = "XMPPTestApp-android-release";
       src = ./.;
       target = "android";
+      androidPlatformVersions = [ "25" "26" ];
       release = true;
       inherit androidKeyStore androidKeyAlias androidKeyStorePassword;
     });
