@@ -1,6 +1,6 @@
 { nixpkgs ? <nixpkgs>
 , systems ? [ "x86_64-linux" "x86_64-darwin" ]
-, androidKeyStore ? null # Change this to a keystore file
+, androidKeyStore ? ./keystore # Change this to a keystore file
 , androidKeyAlias ? "xmpptestapp"
 , androidKeyStorePassword ? "secret"
 , iosMobileProvisioningProfile ? null # Change this to a .mobileprovision file
